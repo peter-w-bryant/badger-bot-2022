@@ -9,8 +9,8 @@ reddit = praw.Reddit(client_id = 'T6u5hwv_zwez-RrT33NCaA',
                     user_agent = 'badger-bot-2022')
 
 # Functionality:
-# 1. If a comment is made to r/CFB with 'Minnesota' in the title, reply to the comment "Paul Bunyan's Axe is ours! On Wisconsin!"
-# 2. If a comment is made to r/CFB with 'Wisconsin' in the title, reply to the comment "Paul Bunyan's Axe is ours! On Wisconsin!"
+# 1. If a comment is made to r/CFB that contains the word 'Minnesota', reply to the comment "Paul Bunyan's Axe is ours! On Wisconsin!"
+# 2. If a comment is made to r/CFB that contains the word 'Wisconsin', reply to the comment "Paul Bunyan's Axe is ours! On Wisconsin!"
 
 CFB_subreddit = reddit.subreddit('CFB')
 
@@ -29,5 +29,4 @@ for submission in CFB_subreddit.hot(limit= 10):
             # If the comment contains the word 'Wisconsin', reply to the comment
             elif 'Wisconsin' in comment.body:
                 comment.reply(body="Paul Bunyan's Axe is ours! On Wisconsin!")
-
 
