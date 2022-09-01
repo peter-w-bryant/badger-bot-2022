@@ -15,7 +15,7 @@ reddit = praw.Reddit(client_id = 'T6u5hwv_zwez-RrT33NCaA',
 CFB_subreddit = reddit.subreddit('CFB')
 
 # Iterate through the last 10 hot posts that are not stickied in CFB_subreddit
-for submission in CFB_subreddit.hot(limit=10):
+for submission in CFB_subreddit.hot(limit= 10):
     # If the submission is stickied, skip it
     if not submission.stickied:
         # Iterate through all comments in the submission
