@@ -1,6 +1,10 @@
 import praw
 # Instantiate an instance of PRAW's Reddit class
-reddit = praw.Reddit(client_id = 'T6u5hwv_zwez-RrT33NCaA', client_secret = 'B--LwQpjQDaDCjMmmhkcPIsy61GrMQ', username = 'badger-bot-2022', password = 'kOV7Nc5#m')
+reddit = praw.Reddit(client_id = 'T6u5hwv_zwez-RrT33NCaA', 
+                    client_secret = 'B--LwQpjQDaDCjMmmhkcPIsy61GrMQ', 
+                    username = 'badger-bot-2022', 
+                    password = 'kOV7Nc5#m',
+                    user_agent = 'badger-bot-2022')
 
 # submission = reddit.subreddit("test").submit("Test Submission", url="https://reddit.com")
 
